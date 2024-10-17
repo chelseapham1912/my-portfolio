@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter,Route, Routes } from "react-router-dom";
 import ServiceDetail1 from "./components/services/ServiceDetail1";
 import ServiceDetail2 from "./components/services/ServiceDetail2";
 import ServiceDetail3 from "./components/services/ServiceDetail3";
@@ -17,15 +17,17 @@ function App() {
   };
 
   return (
+    <BrowserRouter>
     <div className="app" data-theme={theme}>
       <Routes>
         <Route path="/" element={<Main theme={theme} switchTheme={switchTheme} />} />
-        <Route exact path="/service-detail-1" element={<ServiceDetail1 />} />
-        <Route exact path="/service-detail-2" element={<ServiceDetail2 />} />
-        <Route exact path="/service-detail-3" element={<ServiceDetail3 />} />
-        <Route exact path="/service-detail-4" element={<ServiceDetail4 />} />
+        <Route path="/service-detail-1" element={<ServiceDetail1 />} />
+        <Route path="/service-detail-2" element={<ServiceDetail2 />} />
+        <Route path="/service-detail-3" element={<ServiceDetail3 />} />
+        <Route path="/service-detail-4" element={<ServiceDetail4 />} />
       </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
