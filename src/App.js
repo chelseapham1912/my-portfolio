@@ -25,6 +25,7 @@ function App() {
         <Route path="/service-detail-2" element={<ServiceDetail2 />} />
         <Route path="/service-detail-3" element={<ServiceDetail3 />} />
         <Route path="/service-detail-4" element={<ServiceDetail4 />} />
+        
       </Routes>
     </div>
     </BrowserRouter>
